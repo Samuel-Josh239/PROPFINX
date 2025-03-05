@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Loan Application Form</title>
+  <link rel="stylesheet" href="personalStyle.css">
+</head>
+<body>
+  <div class="form-container">
+    <h1>Personal Loan Application Form</h1>
+    <form id="personal-loan-form">
+      <!-- Personal Details -->
+      <fieldset>
+        <legend>Personal Details</legend>
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required autocomplete="off">
+
+        <label>Gender:</label>
+        <div class="radio-group">
+          <input type="radio" id="male" name="gender" value="male" autocomplete="off">
+          <label for="male">Male</label>
+          <input type="radio" id="female" name="gender" value="female" autocomplete="off">
+          <label for="female">Female</label>
+          <input type="radio" id="others" name="gender" value="others" autocomplete="off">
+          <label for="others">Others</label>
+        </div>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required autocomplete="off">
+
+        <label>Employment Type:</label>
+        <div class="radio-group">
+          <input type="radio" id="salaried" name="employment" value="salaried" autocomplete="off">
+          <label for="salaried">Salaried</label>
+          <input type="radio" id="self-employed" name="employment" value="self-employed" autocomplete="off">
+          <label for="self-employed">Self-Employed</label>
+        </div>
+
+        <label for="salary">Salary (Minimum ₹18,000):</label>
+        <input type="number" id="salary" name="salary" min="18000" required autocomplete="off">
+
+        <label for="address">Current Address:</label>
+        <textarea id="address" name="address" rows="4" required autocomplete="off"></textarea>
+      </fieldset>
+
+      <!-- Loan Details -->
+      <fieldset>
+        <legend>Loan Details</legend>
+        <label for="loan-amount">Loan Amount (Minimum ₹30,000):</label>
+        <input type="number" id="loan-amount" name="loan-amount" min="30000" required autocomplete="off">
+      </fieldset>
+
+      <!-- Submit Button -->
+      <button type="submit">Submit Application</button>
+    </form>
+  </div>
+
+  <script src="personalScript.js"></script>
+</body>
+</html>
